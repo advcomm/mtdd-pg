@@ -34,5 +34,16 @@ jobs:
             npm install
             npx tsc
 
+      - name: Create .npmrc for publishing
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Publish Package to npm
         run: npm publish --access public
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Clean up .npmrc
+        run: rm -f .npmrc
+        if: always()
