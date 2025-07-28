@@ -1,5 +1,5 @@
 {
-  "name": "knex",
+  "name": "@mtdd/pg",
   "version": "3.1.0",
   "description": "A batteries-included SQL query & schema builder for PostgresSQL, MySQL, CockroachDB, MSSQL and SQLite3",
   "main": "knex",
@@ -150,11 +150,15 @@
   "bin": {
     "knex": "./bin/cli.js"
   },
+
+"homepage": "https://github.com/advcomm/mtdd-pg#readme",
+  "bugs": {
+    "url": "https://github.com/advcomm/mtdd-pg/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/knex/knex.git"
+    "url": "git+https://github.com/advcomm/mtdd-pg.git"
   },
-  "homepage": "https://knex.github.io/documentation/",
   "keywords": [
     "sql",
     "query",
